@@ -1,56 +1,344 @@
 [
   {
-    "pointOfContact": "abebe",
-    "role": "ceo",
-    "location": "adds",
-    "email": "email",
-    "phoneNumber": "phone",
-    "website": "ww.etg",
-    "id": "8899cd1c-0f9d-4a2e-b910-f730018b2fa4"
+    "pointOfContact": "Hirut Tesfaye",
+    "role": "",
+    "location": "Alabama",
+    "email": "hirutasfaw@hotmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "",
+    "description": "",
+    "id": "086c5055-5b30-4c89-b162-8f56b5f32c8a"
   },
   {
-    "pointOfContact": "abebe",
-    "role": "ceo",
-    "location": "adds",
-    "email": "email",
-    "phoneNumber": "phone",
-    "website": "ww.etg",
-    "id": "8899cd1c-0f9d-4a2e-b910-f730018b2fa34"
+    "pointOfContact": "Hirut Tesfaye",
+    "role": "",
+    "location": "Alabama",
+    "email": "hirutasfaw@hotmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "960e61e6-27a4-42bc-858d-b0747e1619c4"
   },
   {
-    "pointOfContact": "abebe",
-    "role": "ceo",
-    "location": "adds",
-    "email": "email",
-    "phoneNumber": "phone",
-    "website": "ww.etg",
-    "id": "8899cd1c-0f9d-4a2e-b910-f730018b2fa9"
+    "pointOfContact": "DR.Gebeyehu Ejigu",
+    "role": "President",
+    "location": "Arizona",
+    "email": "ecaa3board@gmail.com",
+    "phoneNumber": "708.6420816",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a2"
   },
   {
-    "pointOfContact": "abebe",
-    "role": "ceo",
-    "location": "adds",
-    "email": "email",
-    "phoneNumber": "phone",
-    "website": "ww.etg",
-    "id": "8899cd1c-0f9d-4a2e-b910-f730018b2fa8"
+    "pointOfContact": "Merid Alemayehu",
+    "role": "President",
+    "location": "Atlanta",
+    "email": "staff@ethiopiancaa.org",
+    "phoneNumber": "7706395532",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a3"
   },
   {
-    "pointOfContact": "abebe",
-    "role": "ceo",
-    "location": "adds",
-    "email": "email",
-    "phoneNumber": "phone",
-    "website": "ww.etg",
-    "id": "8899cd1c-0f9d-4a2e-b910-f730018b2fa7"
+    "pointOfContact": "Yoftahe",
+    "role": "Executive Board",
+    "location": "Boston",
+    "email": "theyoftaheshow@gmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a4"
   },
   {
-    "pointOfContact": "first name",
-    "role": "assistant",
-    "location": "Germany",
-    "email": "no@email.com",
-    "phoneNumber": "+25199484432",
-    "website": "now.com",
-    "id": "370f54a5-97ec-4ee0-838b-41325b4c2a1d"
+    "pointOfContact": "Aklilu Adeye",
+    "role": "",
+    "location": "Chicago",
+    "email": "info@ecachicago.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a5"
+  }
+  ,
+  {
+    "pointOfContact": "Samuel Gebremichael /Mesfin",
+    "role": "",
+    "location": "Colorado",
+    "email": "sam@ethioco.org",
+    "phoneNumber": "720.388.7860",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a6"
+  }
+  ,
+  {
+    "pointOfContact": "Mahadere Endale",
+    "role": "Executive Director",
+    "location": "Connecticut",
+    "email": "contact@ecact.org",
+    "phoneNumber": "860.794.1960",
+    "website": "https://ecact.org/",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a7"
+  }
+  ,
+  {
+    "pointOfContact": "",
+    "role": "",
+    "location": "DC",
+    "email": "info@ecdcus.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a8"
+  }
+  ,
+  {
+    "pointOfContact": "Zekarias Felege",
+    "role": "President",
+    "location": "Kansas City",
+    "email": "zekarias.felege@ecokc.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5110"
+  }
+  ,
+  {
+    "pointOfContact": "Yodit Dori",
+    "role": "",
+    "location": "Kentucky",
+    "email": "Yoditdori@hotmail.com",
+    "phoneNumber": "5027419460",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5111"
+  }
+  ,
+  {
+    "pointOfContact": "Hirout Dagnew",
+    "role": "",
+    "location": "Los Angeles",
+    "email": "info@eclosangeles.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5112"
+  }
+  ,
+  {
+    "pointOfContact": "Anteneh",
+    "role": "",
+    "location": "Maryland",
+    "email": "Ethiopiancommunitym@gmail.com",
+    "phoneNumber": "240.839.7805",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5113"
+  }
+  ,
+  {
+    "pointOfContact": "",
+    "role": "",
+    "location": "Massachusetts",
+    "email": "info@mesaboston.org",
+    "phoneNumber": "240.839.7805",
+    "website": "https://www.mesaboston.com/",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5114"
+  }
+  ,
+  {
+    "pointOfContact": "Esuendale Gashaw",
+    "role": "",
+    "location": "Minnesota",
+    "email": "esuendaleg@gmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5115"
+  }
+  ,
+  {
+    "pointOfContact": "Gedlu Metafaria",
+    "role": "",
+    "location": "Missouri (St. Louis)",
+    "email": "Gejigu@govst.edu",
+    "phoneNumber": "314.305.6036",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5116"
+  }
+  ,
+  {
+    "pointOfContact": "Ayanaw",
+    "role": "",
+    "location": "Nashville Tennessee",
+    "email": "contactus@ecantn.org",
+    "phoneNumber": "",
+    "website": "http://www.ecantn.org/",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5117"
+  }
+  ,
+  {
+    "pointOfContact": "",
+    "role": "",
+    "location": "New York",
+    "email": "ecmaany@gmail.com",
+    "phoneNumber": "",
+    "website": "https://www.ecmaany.org/",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5118"
+  }
+  ,
+  {
+    "pointOfContact": "Nuria/Yonas ",
+    "role": "President",
+    "location": "North Carolina",
+    "email": "Nuria.Adem99@gmail.com",
+    "phoneNumber": "206.910.6095",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5119"
+  }
+  ,
+  {
+    "pointOfContact": "Minilik Andarge",
+    "role": "",
+    "location": "Oakland",
+    "email": "ethiopiancommunityoakland@gmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5120"
+  }
+  ,
+  {
+    "pointOfContact": "Yonas Kassie",
+    "role": "Executive Director",
+    "location": "Oregon",
+    "email": "yonask@eecrc.org",
+    "phoneNumber": "503 462 9806",
+    "website": "http://eecrc.org/",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5121"
+  }
+  ,
+  {
+    "pointOfContact": "Huda Yusuf",
+    "role": "",
+    "location": "Oregon",
+    "email": "huday@eecrc.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5122"
+  }
+  ,
+  {
+    "pointOfContact": "Hiwot Bekele",
+    "role": "",
+    "location": "Oregon",
+    "email": "hiwotb@eecrc.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5123"
+  }
+  ,
+  {
+    "pointOfContact": "Adiyam",
+    "role": "",
+    "location": "Oregon",
+    "email": "info@eecrc.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5124"
+  }
+  ,
+  {
+    "pointOfContact": "Abebe Wodaje",
+    "role": "",
+    "location": "Sacramento",
+    "email": "eccsacto@gmail.com",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5125"
+  }
+  ,
+  {
+    "pointOfContact": "Sophia Benalfew",
+    "role": "",
+    "location": "Seattle",
+    "email": "sophiab@ecseattle.org",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5126"
+  }
+  ,
+  {
+    "pointOfContact": "Dawit Alemu",
+    "role": "",
+    "location": "South Carolina",
+    "email": "DawitAlemu83@gmail.com",
+    "phoneNumber": "8034462997",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5127"
+  }
+  ,
+  {
+    "pointOfContact": "Addis",
+    "role": "",
+    "location": "Texas",
+    "email": "ethiocomdallas@gmail.com",
+    "phoneNumber": "214.321.9992",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5128"
+  }
+  ,
+  {
+    "pointOfContact": "Tekele",
+    "role": "",
+    "location": "Toronto",
+    "email": "Tekle@tekle.net",
+    "phoneNumber": "",
+    "website": "",
+    "associationName": "Community Association",
+    "description": "Non-profit Ethiopian  organization.",
+    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5129"
   }
 ]

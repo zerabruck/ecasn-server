@@ -2,7 +2,8 @@ require('dotenv').config();
 const { v4: uuidv4 } = require('uuid');
 const express = require('express');
 const fs = require('fs');
-const upload = require("./multer") 
+const upload = require("./multer")
+const nodemailer = require('nodemailer');
 const {cloudinary} = require('./cloudinary')
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +13,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 
 const users = [
-  { id: '1', username: 'admin@eth.com', password: 'admin' }
+  { id: '1', username: 'admin@ecasn.com', password: 'admin' }
 ];
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -277,6 +278,32 @@ app.delete('/events/:id', async(req, res) => {
         } catch(err){
             console.log(err)
             res.status(500).send('Internal Server Error');
+        }
+    });
+});
+
+// Route to handle form submission and send email
+app.post('/send-email', (req, res) => {
+    const { name, email, message, phone, subject } = req.body;
+      const transporter = nodemailer.createTransport(
+        `smtp://zerabruckm@gmail.com:wxwuslgltrzgoxcv@smtp.gmail.com`
+      );
+    // Email message options
+    const mailOptions = {
+        from: 'zerabruckm@gmail.com',
+        to: 'zerabruckm@gmail.com',
+        subject: 'New Contact Form Submission',
+        text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${message}`
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+            res.status(500).send('Failed to send email');
+        } else {
+            console.log('Email sent:', info.response);
+            res.status(200).send('Email sent successfully');
         }
     });
 });
