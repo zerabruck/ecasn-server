@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "pointOfContact": "Hirut Tesfaye",
     "role": "",
@@ -53,8 +53,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a5"
-  }
-  ,
+  },
   {
     "pointOfContact": "Samuel Gebremichael /Mesfin",
     "role": "",
@@ -65,8 +64,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a6"
-  }
-  ,
+  },
   {
     "pointOfContact": "Mahadere Endale",
     "role": "Executive Director",
@@ -77,8 +75,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a7"
-  }
-  ,
+  },
   {
     "pointOfContact": "",
     "role": "",
@@ -89,8 +86,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a8"
-  }
-  ,
+  },
   {
     "pointOfContact": "Zekarias Felege",
     "role": "President",
@@ -101,8 +97,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5110"
-  }
-  ,
+  },
   {
     "pointOfContact": "Yodit Dori",
     "role": "",
@@ -113,8 +108,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5111"
-  }
-  ,
+  },
   {
     "pointOfContact": "Hirout Dagnew",
     "role": "",
@@ -125,8 +119,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5112"
-  }
-  ,
+  },
   {
     "pointOfContact": "Anteneh",
     "role": "",
@@ -137,8 +130,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5113"
-  }
-  ,
+  },
   {
     "pointOfContact": "",
     "role": "",
@@ -149,8 +141,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5114"
-  }
-  ,
+  },
   {
     "pointOfContact": "Esuendale Gashaw",
     "role": "",
@@ -161,8 +152,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5115"
-  }
-  ,
+  },
   {
     "pointOfContact": "Gedlu Metafaria",
     "role": "",
@@ -173,8 +163,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5116"
-  }
-  ,
+  },
   {
     "pointOfContact": "Ayanaw",
     "role": "",
@@ -185,8 +174,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5117"
-  }
-  ,
+  },
   {
     "pointOfContact": "",
     "role": "",
@@ -197,8 +185,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5118"
-  }
-  ,
+  },
   {
     "pointOfContact": "Nuria/Yonas ",
     "role": "President",
@@ -209,8 +196,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5119"
-  }
-  ,
+  },
   {
     "pointOfContact": "Minilik Andarge",
     "role": "",
@@ -221,8 +207,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5120"
-  }
-  ,
+  },
   {
     "pointOfContact": "Yonas Kassie",
     "role": "Executive Director",
@@ -233,8 +218,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5121"
-  }
-  ,
+  },
   {
     "pointOfContact": "Huda Yusuf",
     "role": "",
@@ -245,8 +229,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5122"
-  }
-  ,
+  },
   {
     "pointOfContact": "Hiwot Bekele",
     "role": "",
@@ -257,8 +240,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5123"
-  }
-  ,
+  },
   {
     "pointOfContact": "Adiyam",
     "role": "",
@@ -269,8 +251,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5124"
-  }
-  ,
+  },
   {
     "pointOfContact": "Abebe Wodaje",
     "role": "",
@@ -281,8 +262,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5125"
-  }
-  ,
+  },
   {
     "pointOfContact": "Sophia Benalfew",
     "role": "",
@@ -293,8 +273,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5126"
-  }
-  ,
+  },
   {
     "pointOfContact": "Dawit Alemu",
     "role": "",
@@ -305,8 +284,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5127"
-  }
-  ,
+  },
   {
     "pointOfContact": "Addis",
     "role": "",
@@ -317,8 +295,7 @@
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5128"
-  }
-  ,
+  },
   {
     "pointOfContact": "Tekele",
     "role": "",
@@ -330,4 +307,4 @@
     "description": "North America based Ethiopian organization",
     "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5129"
   }
-]
+];

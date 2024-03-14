@@ -11,6 +11,8 @@ app.use(express.json());
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+// Import data module
+const { readData, writeData } = require('./data');
 
 const users = [
   { id: '1', username: 'admin@ecasn.com', password: 'admin' }
@@ -79,36 +81,11 @@ function ensureAuthenticated(req, res, next) {
   });
   
 
-
-// Read data from file
-function readData(filename, callback) {
-    fs.readFile(filename, 'utf8', (err, data) => {
-        if (err) {
-            console.error(err);
-            callback([]);
-        } else {
-            callback(JSON.parse(data));
-        }
-    });
-}
-
-// Write data to file
-function writeData(filename, data, callback) {
-    fs.writeFile(filename, JSON.stringify(data, null, 2), (err) => {
-        if (err) {
-            console.error(err);
-            callback(err);
-        } else {
-            callback(null);
-        }
-    });
-}
-
 // Endpoints for associations
 
 // Get all associations
 app.get('/associations', (req, res) => {
-    readData('associations.json', (associations) => {
+    readData('associations', (associations) => {
         res.json(associations);
     });
 });
@@ -116,7 +93,7 @@ app.get('/associations', (req, res) => {
 // Get single association
 app.get('/associations/:id', (req, res) => {
     const id = req.params.id
-    readData('associations.json', (associations) => {
+    readData('associations', (associations) => {
         const association = associations.filter(singleAssocaiton => singleAssocaiton.id === id)
         res.json(association[0]);
     });
@@ -125,9 +102,9 @@ app.get('/associations/:id', (req, res) => {
 // Create a new association
 app.post('/associations', (req, res) => {
     const newAssociation = {...req.body, id:uuidv4()};
-    readData('associations.json', (associations) => {
+    readData('associations', (associations) => {
         associations.push(newAssociation);
-        writeData('associations.json', associations, (err) => {
+        writeData('associations', associations, (err) => {
             if (err) {
                 res.status(500).send('Internal Server Error');
             } else {
@@ -141,11 +118,11 @@ app.post('/associations', (req, res) => {
 app.put('/associations/:id', (req, res) => {
     const id = req.params.id;
     const updatedAssociation = req.body;
-    readData('associations.json', (associations) => {
+    readData('associations', (associations) => {
         const index = associations.findIndex(item => item.id === id);
         if (index !== -1) {
             associations[index] = { ...associations[index], ...updatedAssociation };
-            writeData('associations.json', associations, (err) => {
+            writeData('associations', associations, (err) => {
                 if (err) {
                     res.status(500).send('Internal Server Error');
                 } else {
@@ -161,11 +138,11 @@ app.put('/associations/:id', (req, res) => {
 // Delete an association
 app.delete('/associations/:id', (req, res) => {
     const id = req.params.id;
-    readData('associations.json', (associations) => {
+    readData('associations', (associations) => {
         const index = associations.findIndex(item => item.id === id);
         if (index !== -1) {
             const deletedAssociation = associations.splice(index, 1)[0];
-            writeData('associations.json', associations, (err) => {
+            writeData('associations', associations, (err) => {
                 if (err) {
                     res.status(500).send('Internal Server Error');
                 } else {
@@ -182,7 +159,7 @@ app.delete('/associations/:id', (req, res) => {
 
 // Get all events
 app.get('/events', (req, res) => {
-    readData('events.json', (events) => {
+    readData('events', (events) => {
         res.json(events);
     });
 });
@@ -190,7 +167,7 @@ app.get('/events', (req, res) => {
 // Get single event
 app.get('/events/:id', (req, res) => {
     const id = req.params.id
-    readData('events.json', (events) => {
+    readData('events', (events) => {
         const event = events.filter(singleEvent => singleEvent.id === id)
         res.json(event[0]);
     });
@@ -201,9 +178,9 @@ app.post('/events',upload.single('image'), async(req, res) => {
         try{
         const result = await cloudinary.uploader.upload(req.file.path)
         const newEvent ={...req.body, image_url:result.url, public_id:result.public_id, id:uuidv4()};
-        readData('events.json', (events) => {
+        readData('events', (events) => {
             events.push(newEvent);
-            writeData('events.json', events, (err) => {
+            writeData('events', events, (err) => {
                 if (err) {
                     res.status(500).send('Internal Server Error');
                 } else {
@@ -237,11 +214,11 @@ app.put('/events/:id', upload.single('image'), async(req, res) => {
     }
     }
 
-        readData('events.json', (events) => {
+        readData('events', (events) => {
             const index = events.findIndex(item => item.id === id);
             if (index !== -1) {
                 events[index] = { ...events[index], ...updatedEvent };
-                writeData('events.json', events, (err) => {
+                writeData('events', events, (err) => {
                     if (err) {
                         res.status(500).send('Internal Server Error');
                     } else {
@@ -258,13 +235,13 @@ app.put('/events/:id', upload.single('image'), async(req, res) => {
 app.delete('/events/:id', async(req, res) => {
     const id = req.params.id;
 
-    readData('events.json', async(events) => {
+    readData('events', async(events) => {
         const index = events.findIndex(item => item.id === id);
         try{
             if (index !== -1) {
                 const deletedEvent = events.splice(index, 1)[0];
                 await cloudinary.uploader.destroy(deletedEvent.public_id);
-                writeData('events.json', events, (err) => {
+                writeData('events', events, (err) => {
                     if (err) {
                         res.status(500).send('Internal Server Error');
                     } else {
