@@ -76,7 +76,6 @@ app.get('/logout', (req, res) => {
   });
 
 function ensureAuthenticated(req, res, next) {
-    console.log("this is the authenticated user", req)
   if (req.isAuthenticated()) {
     return next();
   }
@@ -92,7 +91,6 @@ function ensureAuthenticated(req, res, next) {
 
 // Get all associations
 app.get('/associations', async (req, res) => {
-    console.log("this is the association length", associations.length)
     try {
         const associations = await Association.find();
         res.json(associations);
@@ -206,10 +204,8 @@ app.put('/events/:id', upload.single('image'), async(req, res) => {
         if (!eventToUpdate) {
           return res.status(404).json({ message: 'Event not found' });
         }
-        console.log("this is the event name", req.body)
     
         let updatedEventData = { ...eventToUpdate._doc, ...req.body };
-        console.log("this is the updated data", updatedEventData)
     
         if (req.file) {
           try {
