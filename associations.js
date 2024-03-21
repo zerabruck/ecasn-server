@@ -8,7 +8,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "960e61e6-27a4-42bc-858d-b0747e1619c4"
   },
   {
     "pointOfContact": "DR.Gebeyehu Ejigu",
@@ -19,7 +18,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a2"
   },
   {
     "pointOfContact": "Merid Alemayehu",
@@ -30,7 +28,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a3"
   },
   {
     "pointOfContact": "Yoftahe",
@@ -41,7 +38,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a4"
   },
   {
     "pointOfContact": "Aklilu Adeye",
@@ -52,7 +48,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a5"
   },
   {
     "pointOfContact": "Samuel Gebremichael /Mesfin",
@@ -63,7 +58,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a6"
   },
   {
     "pointOfContact": "Mahadere Endale",
@@ -74,7 +68,6 @@ module.exports = [
     "website": "https://ecact.org/",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a7"
   },
   {
     "pointOfContact": "",
@@ -85,7 +78,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f51a8"
   },
   {
     "pointOfContact": "Zekarias Felege",
@@ -96,7 +88,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5110"
   },
   {
     "pointOfContact": "Yodit Dori",
@@ -107,7 +98,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5111"
   },
   {
     "pointOfContact": "Hirout Dagnew",
@@ -118,7 +108,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5112"
   },
   {
     "pointOfContact": "Anteneh",
@@ -129,7 +118,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5113"
   },
   {
     "pointOfContact": "",
@@ -140,7 +128,6 @@ module.exports = [
     "website": "https://www.mesaboston.com/",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5114"
   },
   {
     "pointOfContact": "Esuendale Gashaw",
@@ -151,7 +138,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5115"
   },
   {
     "pointOfContact": "Gedlu Metafaria",
@@ -162,7 +148,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5116"
   },
   {
     "pointOfContact": "Ayanaw",
@@ -173,7 +158,6 @@ module.exports = [
     "website": "http://www.ecantn.org/",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5117"
   },
   {
     "pointOfContact": "",
@@ -184,7 +168,6 @@ module.exports = [
     "website": "https://www.ecmaany.org/",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5118"
   },
   {
     "pointOfContact": "Nuria/Yonas ",
@@ -195,7 +178,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5119"
   },
   {
     "pointOfContact": "Minilik Andarge",
@@ -206,7 +188,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5120"
   },
   {
     "pointOfContact": "Yonas Kassie",
@@ -217,7 +198,6 @@ module.exports = [
     "website": "http://eecrc.org/",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5121"
   },
   {
     "pointOfContact": "Huda Yusuf",
@@ -228,7 +208,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5122"
   },
   {
     "pointOfContact": "Hiwot Bekele",
@@ -239,7 +218,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5123"
   },
   {
     "pointOfContact": "Adiyam",
@@ -250,7 +228,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5124"
   },
   {
     "pointOfContact": "Abebe Wodaje",
@@ -261,7 +238,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5125"
   },
   {
     "pointOfContact": "Sophia Benalfew",
@@ -272,7 +248,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5126"
   },
   {
     "pointOfContact": "Dawit Alemu",
@@ -283,7 +258,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5127"
   },
   {
     "pointOfContact": "Addis",
@@ -294,7 +268,6 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5128"
   },
   {
     "pointOfContact": "Tekele",
@@ -305,6 +278,5 @@ module.exports = [
     "website": "",
     "associationName": "Community Association",
     "description": "North America based Ethiopian organization",
-    "id": "c4f2255d-bd6d-48b3-9b36-0026a62f5129"
   }
 ];

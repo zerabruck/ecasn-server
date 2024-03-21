@@ -11,8 +11,15 @@ app.use(express.json());
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
-// Import data module
+const mongoose = require('mongoose');
 const { readData, writeData } = require('./data');
+const Association = require('./models/association');
+const Event = require('./models/event');
+const associations = require('./associations');
+
+// MongoDB connection
+mongoose.connect(process.env.MONGODB_URI).then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 const users = [
   { id: '1', username: 'admin@ecasn.com', password: 'admin' }
@@ -84,179 +91,165 @@ function ensureAuthenticated(req, res, next) {
 // Endpoints for associations
 
 // Get all associations
-app.get('/associations', (req, res) => {
-    readData('associations', (associations) => {
+app.get('/associations', async (req, res) => {
+    console.log("this is the association length", associations.length)
+    try {
+        const associations = await Association.find();
         res.json(associations);
-    });
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Get single association
-app.get('/associations/:id', (req, res) => {
-    const id = req.params.id
-    readData('associations', (associations) => {
-        const association = associations.filter(singleAssocaiton => singleAssocaiton.id === id)
-        res.json(association[0]);
-    });
+app.get('/associations/:id', async(req, res) => {
+    try {
+        const association = await Association.findById(req.params.id);
+        if (!association) {
+          return res.status(404).json({ message: 'Association not found' });
+        }
+        res.json(association);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Create a new association
-app.post('/associations', (req, res) => {
-    const newAssociation = {...req.body, id:uuidv4()};
-    readData('associations', (associations) => {
-        associations.push(newAssociation);
-        writeData('associations', associations, (err) => {
-            if (err) {
-                res.status(500).send('Internal Server Error');
-            } else {
-                res.status(201).json(newAssociation);
-            }
-        });
-    });
+app.post('/associations', async(req, res) => {
+    try {
+        const newAssociation = await Association.create(req.body);
+        res.status(201).json(newAssociation);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Update an existing association
-app.put('/associations/:id', (req, res) => {
-    const id = req.params.id;
-    const updatedAssociation = req.body;
-    readData('associations', (associations) => {
-        const index = associations.findIndex(item => item.id === id);
-        if (index !== -1) {
-            associations[index] = { ...associations[index], ...updatedAssociation };
-            writeData('associations', associations, (err) => {
-                if (err) {
-                    res.status(500).send('Internal Server Error');
-                } else {
-                    res.json(associations[index]);
-                }
-            });
-        } else {
-            res.status(404).json({ message: 'Association not found' });
+app.put('/associations/:id', async(req, res) => {
+    try {
+        const updatedAssociation = await Association.findByIdAndUpdate(req.params.id, req.body, { new: true });
+        if (!updatedAssociation) {
+          return res.status(404).json({ message: 'Association not found' });
         }
-    });
+        res.json(updatedAssociation);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Delete an association
-app.delete('/associations/:id', (req, res) => {
-    const id = req.params.id;
-    readData('associations', (associations) => {
-        const index = associations.findIndex(item => item.id === id);
-        if (index !== -1) {
-            const deletedAssociation = associations.splice(index, 1)[0];
-            writeData('associations', associations, (err) => {
-                if (err) {
-                    res.status(500).send('Internal Server Error');
-                } else {
-                    res.json(deletedAssociation);
-                }
-            });
-        } else {
-            res.status(404).json({ message: 'Association not found' });
+app.delete('/associations/:id', async(req, res) => {
+    try {
+        const deletedAssociation = await Association.findByIdAndDelete(req.params.id);
+        if (!deletedAssociation) {
+          return res.status(404).json({ message: 'Association not found' });
         }
-    });
+        res.json(deletedAssociation);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Endpoints for events
 
 // Get all events
-app.get('/events', (req, res) => {
-    readData('events', (events) => {
+app.get('/events', async(req, res) => {
+    try {
+        const events = await Event.find();
         res.json(events);
-    });
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Get single event
-app.get('/events/:id', (req, res) => {
-    const id = req.params.id
-    readData('events', (events) => {
-        const event = events.filter(singleEvent => singleEvent.id === id)
-        res.json(event[0]);
-    });
+app.get('/events/:id', async(req, res) => {
+    try {
+        const event = await Event.findById(req.params.id);
+        if (!event) {
+          return res.status(404).json({ message: 'Event not found' });
+        }
+        res.json(event);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 // Create a new event
 app.post('/events',upload.single('image'), async(req, res) => {
-    if (Object.keys(req.body).length !== 0){
-        try{
-        const result = await cloudinary.uploader.upload(req.file.path)
-        const newEvent ={...req.body, image_url:result.url, public_id:result.public_id, id:uuidv4()};
-        readData('events', (events) => {
-            events.push(newEvent);
-            writeData('events', events, (err) => {
-                if (err) {
-                    res.status(500).send('Internal Server Error');
-                } else {
-                    res.status(201).json(newEvent);
-                }
-            });
-        });
-        }
-        catch(err){
-            res.status(500).send("Internal Server Error")
-        }
-
-    }else {
-        res.status(404).json({ message: 'Event body not found' });
-    }
+    try {
+        const result = await cloudinary.uploader.upload(req.file.path);
+        const newEvent = {
+          ...req.body,
+          imageUrl: result.url,
+          publicId: result.public_id,
+        };
+        const createdEvent = await Event.create(newEvent);
+        res.status(201).json(createdEvent);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+    
 });
 
 // Update an existing event
 app.put('/events/:id', upload.single('image'), async(req, res) => {
-    const id = req.params.id;
-    let updatedEvent = req.body;
-    if (req.file){
-        try{
-            await cloudinary.uploader.destroy(updatedEvent.public_id);
-            const result = await cloudinary.uploader.upload(req.file.path)
-            updatedEvent = {...updatedEvent, image_url:result.url, public_id:result.public_id}
+    try {
+        let eventToUpdate = await Event.findById(req.params.id);
+        if (!eventToUpdate) {
+          return res.status(404).json({ message: 'Event not found' });
+        }
+        console.log("this is the event name", req.body)
     
-        } catch(err){
-            console.log(err)
-        return res.status(500).send("Internal Server Error")
-    }
-    }
-
-        readData('events', (events) => {
-            const index = events.findIndex(item => item.id === id);
-            if (index !== -1) {
-                events[index] = { ...events[index], ...updatedEvent };
-                writeData('events', events, (err) => {
-                    if (err) {
-                        res.status(500).send('Internal Server Error');
-                    } else {
-                        res.json(events[index]);
-                    }
-                });
-            } else {
-                res.status(404).json({ message: 'Event not found' });
-            }
-        });
+        let updatedEventData = { ...eventToUpdate._doc, ...req.body };
+        console.log("this is the updated data", updatedEventData)
+    
+        if (req.file) {
+          try {
+            await cloudinary.uploader.destroy(eventToUpdate.publicId);
+            const result = await cloudinary.uploader.upload(req.file.path);
+            updatedEventData = {
+              ...updatedEventData,
+              imageUrl: result.url,
+              publicId: result.public_id
+            };
+          } catch (err) {
+            console.error(err);
+            return res.status(500).json({ error: 'Internal Server Error' });
+          }
+        }
+    
+        const updatedEvent = await Event.findByIdAndUpdate(req.params.id, updatedEventData, { new: true });
+        res.json(updatedEvent);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+    
 });
 
 // Delete an event
 app.delete('/events/:id', async(req, res) => {
-    const id = req.params.id;
-
-    readData('events', async(events) => {
-        const index = events.findIndex(item => item.id === id);
-        try{
-            if (index !== -1) {
-                const deletedEvent = events.splice(index, 1)[0];
-                await cloudinary.uploader.destroy(deletedEvent.public_id);
-                writeData('events', events, (err) => {
-                    if (err) {
-                        res.status(500).send('Internal Server Error');
-                    } else {
-                        res.json(deletedEvent);
-                    }
-                });
-            } else {
-                res.status(404).json({ message: 'Event not found' });
-            }
-
-        } catch(err){
-            console.log(err)
-            res.status(500).send('Internal Server Error');
+    try {
+        const eventToDelete = await Event.findById(req.params.id);
+        if (!eventToDelete) {
+          return res.status(404).json({ message: 'Event not found' });
         }
-    });
+    
+        await cloudinary.uploader.destroy(eventToDelete.publicId);
+        await Event.findByIdAndDelete(req.params.id);
+        res.json({ message: 'Event deleted successfully' });
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
 });
 
 // Route to handle form submission and send email
